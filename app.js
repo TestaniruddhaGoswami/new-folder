@@ -1,24 +1,27 @@
-var btn = document.querySelector("#input");
-//alert(1)
-var divoutput = document.querySelector("#output");
-function eventHandler()
-{  var url = "https://stock-api.desaihetav.repl.co/lst";
-fetch(url)
-.then((response)=>response.json())
-.then((data)=>{
+var userinput = document.querySelector("#input")
+var logb = document.querySelector("#input1")
+var warnb = document.querySelector("#input2")
+var errorb = document.querySelector("#input3")
+var output = document.querySelector("#output")
+
+logb.addEventListener('click',(color1)=>{
     
-data.data.map(item =>{
-    divoutput.innerHTML += `<li>${item.id}</li>`
-  })
+    output.innerHTML =  userinput.value;
+   
+    output.style.color="black"
+   // alert(1)
 
-  
 })
-.catch((error)=>{
-    if(error.status = 404)
-    divoutput.innerHTML= "not found."
-   else if (error.status = 401)
-    divoutput.innerHTML = "you are not logged in."
-})
-}
+warnb.addEventListener('click',(color2)=>{
+    output.innerHTML =  userinput.value;
+   
+    output.style.color="yellow";
+    
 
-btn.addEventListener('click',eventHandler)
+})
+errorb.addEventListener('click',(color3)=>{
+    output.innerHTML =  userinput.value;
+   
+    output.style.color="red";
+
+})
