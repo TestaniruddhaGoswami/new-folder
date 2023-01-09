@@ -14,7 +14,10 @@ data.data.map(item =>{
   
 })
 .catch((error)=>{
-    divoutput.innerHTML= "there is some error please try again."
+    if(error.status = 404)
+    divoutput.innerHTML= "not found."
+   else if (error.status = 401)
+    divoutput.innerHTML = "you are not logged in."
 })
 }
 
