@@ -1,27 +1,33 @@
 var userinput = document.querySelector("#input")
-var logb = document.querySelector("#input1")
-var warnb = document.querySelector("#input2")
-var errorb = document.querySelector("#input3")
+var btn = document.querySelector("#btn")
+
 var output = document.querySelector("#output")
 
-logb.addEventListener('click',(color1)=>{
+btn.addEventListener('click',(color1)=>{
     
-    output.innerHTML =  userinput.value;
+     if(userinput.value.toLowerCase()==="tanvi")
+     {
+        output.innerHTML= "She is the best CEO"
+     }
+     else if(userinput.value.toLowerCase()==="tanay")
+     {
+        output.innerHTML= "funny mentor"
+     }
+     else if(userinput.value.toLowerCase()==="swapnil")
+     {
+        output.innerHTML= "helps us conquer jobs"
+     }
+     else if(userinput.value.toLowerCase()==="akansha")
+     {
+        output.innerHTML= "interviewer"
+     }
+     else 
+     {
+        output.innerHTML= input.value
+     }
+
    
-    output.style.color="black"
+   
    // alert(1)
-
-})
-warnb.addEventListener('click',(color2)=>{
-    output.innerHTML =  userinput.value;
-   
-    output.style.color="yellow";
-    
-
-})
-errorb.addEventListener('click',(color3)=>{
-    output.innerHTML =  userinput.value;
-   
-    output.style.color="red";
 
 })
