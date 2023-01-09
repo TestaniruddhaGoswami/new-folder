@@ -1,31 +1,20 @@
 var userinput = document.querySelector("#input")
 var btn = document.querySelector("#btn")
 
-var output = document.querySelector("#output")
+var password = document.querySelector("#password")
 
 btn.addEventListener('click',(color1)=>{
-    
-     if(userinput.value.toLowerCase()==="tanvi")
+    var b = userinput.value.toLowerCase();
+    var c = password.value.toLowerCase();
+     if(b===c)
      {
-        output.innerHTML= "She is the best CEO"
+        output.innerHTML= "password cannot have name."
      }
-     else if(userinput.value.toLowerCase()==="tanay")
+     else
      {
-        output.innerHTML= "funny mentor"
+        output.innerHTML= "thankyou."
      }
-     else if(userinput.value.toLowerCase()==="swapnil")
-     {
-        output.innerHTML= "helps us conquer jobs"
-     }
-     else if(userinput.value.toLowerCase()==="akansha")
-     {
-        output.innerHTML= "interviewer"
-     }
-     else 
-     {
-        output.innerHTML= input.value
-     }
-
+     
    
    
    // alert(1)
