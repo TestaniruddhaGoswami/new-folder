@@ -2,7 +2,7 @@ var btn = document.querySelector("#input");
 //alert(1)
 var divoutput = document.querySelector("#output");
 function eventHandler()
-{  var url = "https://stock-api.desaihetav.repl.co/list";
+{  var url = "https://stock-api.desaihetav.repl.co/lst";
 fetch(url)
 .then((response)=>response.json())
 .then((data)=>{
@@ -12,6 +12,9 @@ data.data.map(item =>{
   })
 
   
+})
+.catch((error)=>{
+    divoutput.innerHTML= "there is some error please try again."
 })
 }
 
